@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Jonathan Ben-Ammi">
+	<title></title>
+	<meta name="description" content="">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css')}}">
+</head>
+<body>
+<h2>Edit a Friend</h2>
+  <form action='/friends/{{friend['id']}}' method='POST'>
+    <label for="first_name">First Name:</label>
+    <input type="text" name="first_name" id="first_name" value="{{friend['first_name']}}">
+    <label for="last_name">Last Name:</label>
+    <input type="text" name="last_name" id="last_name" value="{{friend['last_name']}}">
+    <label for="occupation">Occupation:</label>
+    <input type="text" name="occupation" id="occupation" value="{{friend['occupation']}}">
+    <input type="submit" value="Update">
+  </form>
+</body>
+</html>
